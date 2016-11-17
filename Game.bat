@@ -715,20 +715,20 @@ pause >nul
 goto searchskeleton
 :keys
 cls
-echo 
+echo You grab the keys off the skeleton and you notice that they could fit into the chest.
 echo.
 echo What would you like to do?
 echo.
-echo 1. 
-echo 2. 
-echo 3.  
+echo 1. Try them on the chest
+echo 2. Put them away
+echo 3. Leave them with the skeleton and leave
 echo.
-set /p input=Enter: 
-if
-if
-if
-if
-if
+set /p input28=Enter: 
+if %input28% lss 1 goto keys
+if %input28% equ 1 goto openchest
+if %input28% equ 2 goto searchskeleton
+if %input28% equ 3 goto lookaroundunder
+if %input28% geq 4 goto keys
 :w/myaxe2
 cls
 echo What axe?
